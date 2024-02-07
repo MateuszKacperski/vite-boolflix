@@ -5,12 +5,13 @@ export default {
     components: {
         AppSerchbar
     },
+    emits: ['serch']
 }
 </script>
 
 <template>
     <h1>BoolFlix</h1>
-    <AppSerchbar />
+    <AppSerchbar @serch-film="$emit('serch', $code)" />
 </template>
 
 <style lang="scss" scoped></style>

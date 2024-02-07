@@ -15,13 +15,13 @@ export default {
       axios.get(endpointFilm).then(res => {
         store.films = res.data.results
       })
-    }
+    },
   }
 }
 </script>
 
 <template>
-  <AppHeader />
+  <AppHeader @serch="serchedResults" />
   <AppMain />
 </template>
 
