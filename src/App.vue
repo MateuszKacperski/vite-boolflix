@@ -10,9 +10,9 @@ export default {
     AppMain
   },
   methods: {
-    serchedResults() {
-      const endpoint = 'https://api.themoviedb.org/3/search/movie?query=witcher&api_key=16517ebfb9792a1146d392bafdbe760b'
-      axios.get(endpoint).then(res => {
+    serchedResults(serchFilm) {
+      const endpointFilm = `https://api.themoviedb.org/3/search/movie?query=${serchFilm}&api_key=16517ebfb9792a1146d392bafdbe760b`
+      axios.get(endpointFilm).then(res => {
         store.films = res.data.results
       })
     }
