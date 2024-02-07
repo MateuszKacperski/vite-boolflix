@@ -4,7 +4,8 @@ export default {
     name: 'AppHeder',
     components: {
         AppSerchbar
-    }
+    },
+
 }
 </script>
 

@@ -9,7 +9,9 @@ export default {
 </script>
 
 <template>
-    <ListFilms />
+    <main class="countainer">
+        <ListFilms />
+    </main>
 </template>
 
 <style lang="scss" scoped></style>
