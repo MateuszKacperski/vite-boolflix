@@ -14,7 +14,8 @@ export default {
 
 <template>
     <div v-for="film in store.films" :key="film.result.id">
-        <FilmCard />
+        <FilmCard :titolo="film.results.title" :titoloOriginale="film.results.original_title"
+            :lingua="film.results.original_language" :voto="film.results.vote_average" />
     </div>
 </template>
 

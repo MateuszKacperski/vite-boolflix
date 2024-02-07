@@ -5,7 +5,6 @@ export default {
     components: {
         AppSerchbar
     },
-
 }
 </script>
 
