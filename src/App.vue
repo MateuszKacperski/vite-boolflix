@@ -1,7 +1,6 @@
 <script>
 import axios from 'axios';
 import { store } from './data/store.js';
-const endpoint = 'https://api.themoviedb.org/3/search/movie?query=witcher&api_key=16517ebfb9792a1146d392bafdbe760b'
 import AppMain from './components/AppMain.vue';
 import AppHeader from './components/AppHeader.vue'
 export default {
@@ -12,8 +11,9 @@ export default {
   },
   methods: {
     serchedResults() {
+      const endpoint = 'https://api.themoviedb.org/3/search/movie?query=witcher&api_key=16517ebfb9792a1146d392bafdbe760b'
       axios.get(endpoint).then(res => {
-        store.film = res.data.results
+        store.films = res.data.results
       })
     }
   }
