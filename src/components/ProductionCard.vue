@@ -20,19 +20,26 @@ export default {
         flagSrc() {
             const url = new URL(`../assets/img/${this.production.original_language}.png`, import.meta.url);
             return url.href;
+        },
+        image() {
+            return endpoint = `https://image.tmdb.org/t/p/w342${production.poster_path}`;
         }
+
     }
 }
 </script>
 
 <template>
-    <li> {{ title }}</li>
-    <li>{{ originalTitle }}</li>
-    <li>
-        <img v-if="hasFlag" :src="flagSrc" :alt="production.original_language">
-        <span v-else>{{ production.original_language }}</span>
-    </li>
-    <li>{{ production.vote_average }}</li>
+    <ul>
+        <img :src="image" :alt="production.poster_path">
+        <li> {{ title }}</li>
+        <li>{{ originalTitle }}</li>
+        <li>
+            <img v-if="hasFlag" :src="flagSrc" :alt="production.original_language">
+            <span v-else>{{ production.original_language }}</span>
+        </li>
+        <li>{{ production.vote_average }}</li>
+    </ul>
 </template>
 
 <style lang="scss" scoped></style>

@@ -18,4 +18,4 @@ export default {
     <ProductionCard v-for="serie in store.series" :key="serie.id" :production="serie" />
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped></style> 
