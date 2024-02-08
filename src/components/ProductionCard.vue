@@ -30,7 +30,6 @@ export default {
             const starVote = (this.production.vote_average / 2);
             return starVote.toFixed(0);
         }
-
     }
 }
 </script>

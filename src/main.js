@@ -11,10 +11,6 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 /* import specific icons */
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
-
-
-
-
 // dico cosa caricare
 library.add(faStar);
 

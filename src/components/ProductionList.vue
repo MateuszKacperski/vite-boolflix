@@ -13,8 +13,9 @@ export default {
 </script>
 
 <template>
+    <h1>Films</h1>
     <ProductionCard v-for="film in store.films" :key="film.id" :production="film" />
-    <h1>serie</h1>
+    <h1>Series</h1>
     <ProductionCard v-for="serie in store.series" :key="serie.id" :production="serie" />
 </template>
 
