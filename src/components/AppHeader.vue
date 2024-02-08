@@ -11,7 +11,7 @@ export default {
 
 <template>
     <h1>BoolFlix</h1>
-    <AppSerchbar @serch-film="$emit('serch', $code)" />
+    <AppSerchbar @serch-film="$emit('serch', $event)" />
 </template>
 
 <style lang="scss" scoped></style>
