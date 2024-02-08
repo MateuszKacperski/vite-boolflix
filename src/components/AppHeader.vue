@@ -22,6 +22,7 @@ export default {
 header {
     background-color: black;
     min-height: 100px;
+    border-bottom: 1px solid gray;
 }
 
 h1 {

@@ -9,9 +9,16 @@ export default {
 </script>
 
 <template>
-    <main class="countainer">
-        <ProductionList />
+    <main>
+        <div class="container">
+            <ProductionList />
+        </div>
     </main>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+main {
+    background-color: black;
+    color: white;
+}
+</style>

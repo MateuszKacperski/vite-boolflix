@@ -15,11 +15,15 @@ export default {
 <template>
     <section id="films-list">
         <h1>Films</h1>
-        <ProductionCard v-for="film in store.films" :key="film.id" :production="film" />
+        <div class="row g-3 row-col-3">
+            <ProductionCard v-for="film in store.films" :key="film.id" :production="film" />
+        </div>
     </section>
     <section id="series-list">
         <h1>Series</h1>
-        <ProductionCard v-for="serie in store.series" :key="serie.id" :production="serie" />
+        <div class="row g-3 row-col-3">
+            <ProductionCard v-for="serie in store.series" :key="serie.id" :production="serie" />
+        </div>
     </section>
 </template>
 

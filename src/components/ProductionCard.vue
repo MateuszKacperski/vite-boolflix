@@ -25,27 +25,63 @@ export default {
             const endpointImg = `https://image.tmdb.org/t/p/w342${this.production.poster_path}`;
             return endpointImg
         },
-
         vote() {
             const starVote = (this.production.vote_average / 2);
             return starVote.toFixed(0);
         }
-
     }
 }
 </script>
 
 <template>
-    <img :src="image" :alt="title">
-    <ul>
-        <li> {{ title }}</li>
-        <li>{{ originalTitle }}</li>
-        <li>
-            <img v-if="hasFlag" :src="flagSrc" :alt="production.original_language">
-            <span v-else>{{ production.original_language }}</span>
-        </li>
-        <li>{{ vote }}</li>
-    </ul>
+    <div class="col">
+        <div class="production-img" :style="{ backgroundImage: 'url(' + image + ')' }"></div>
+        <ul class="cover show">
+            <li><strong>Titolo:</strong> {{ title }}</li>
+            <li><strong>Titolo originale:</strong>{{ originalTitle }}</li>
+            <li>
+                <img v-if="hasFlag" :src="flagSrc" :alt="production.original_language" class="img-fluid img-flag">
+                <span v-else>{{ production.original_language }}</span>
+            </li>
+            <li><strong>Voto:</strong>{{ vote }}</li>
+        </ul>
+    </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+ul {
+    list-style-type: none;
+    color: white;
+    background-color: black;
+}
+
+li {
+    padding-top: 10px;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.img-flag {
+    max-height: 30px;
+}
+
+.production-img {
+    min-height: 500px;
+    width: 300px;
+}
+
+.production-img:hover {
+    display: none;
+}
+
+.production-img:hover+.cover {
+    display: block;
+    border: 2px solid white;
+}
+
+.cover {
+    display: none;
+    min-height: 500px;
+    width: 300px;
+}
+</style>
