@@ -1,16 +1,16 @@
 <script>
-import ListFilms from './ListFilms.vue';
+import ProductionList from './ProductionList.vue';
 export default {
     name: 'AppMain',
     components: {
-        ListFilms
+        ProductionList
     }
 }
 </script>
 
 <template>
     <main class="countainer">
-        <ListFilms />
+        <ProductionList />
     </main>
 </template>
 
