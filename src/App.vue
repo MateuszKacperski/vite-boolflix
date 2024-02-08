@@ -11,10 +11,14 @@ export default {
   },
   methods: {
     serchedResults(serchFilm) {
-      const endpoint = `https://api.themoviedb.org/3/search/movie?query=${serchFilm}&api_key=16517ebfb9792a1146d392bafdbe760b`
-      axios.get(endpoint).then(res => {
+      const endpointFilm = `https://api.themoviedb.org/3/search/movie?query=${serchFilm}&api_key=16517ebfb9792a1146d392bafdbe760b`
+      const endpointTv = `https://api.themoviedb.org/3/search/tv?api_key=16517ebfb9792a1146d392bafdbe760b&query=${serchFilm}`
+      axios.get(endpointFilm).then(res => {
         store.films = res.data.results
-      })
+      }),
+        axios.get(endpointTv).then(res => {
+          store.tv = res.data.results
+        })
     },
   }
 }
