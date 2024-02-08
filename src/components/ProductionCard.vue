@@ -22,16 +22,16 @@ export default {
             return url.href;
         },
         image() {
-            return endpoint = `https://image.tmdb.org/t/p/w342${production.poster_path}`;
+            const endpointImg = `https://image.tmdb.org/t/p/w342${this.production.poster_path}`;
+            return endpointImg
         }
-
     }
 }
 </script>
 
 <template>
     <ul>
-        <img :src="image" :alt="production.poster_path">
+        <img :src="image" :alt="title">
         <li> {{ title }}</li>
         <li>{{ originalTitle }}</li>
         <li>
