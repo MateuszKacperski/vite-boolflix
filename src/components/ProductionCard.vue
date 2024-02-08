@@ -24,7 +24,13 @@ export default {
         image() {
             const endpointImg = `https://image.tmdb.org/t/p/w342${this.production.poster_path}`;
             return endpointImg
+        },
+
+        vote() {
+            const starVote = (this.production.vote_average / 2);
+            return starVote.toFixed(0);
         }
+
     }
 }
 </script>
@@ -38,7 +44,7 @@ export default {
             <img v-if="hasFlag" :src="flagSrc" :alt="production.original_language">
             <span v-else>{{ production.original_language }}</span>
         </li>
-        <li>{{ production.vote_average }}</li>
+        <li>{{ vote }}</li>
     </ul>
 </template>
 
