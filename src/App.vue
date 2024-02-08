@@ -19,7 +19,7 @@ export default {
         axios.get(endpointTv).then(res => {
           store.tv = res.data.results
         })
-    },
+    }
   }
 }
 </script>
