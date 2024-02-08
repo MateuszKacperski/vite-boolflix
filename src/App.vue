@@ -37,4 +37,8 @@ export default {
 
 <style lang="scss" scoped>
 @use './assets/scss/style.scss';
+
+body {
+  background-color: black;
+}
 </style>

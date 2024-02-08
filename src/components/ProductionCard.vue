@@ -30,13 +30,14 @@ export default {
             const starVote = (this.production.vote_average / 2);
             return starVote.toFixed(0);
         }
+
     }
 }
 </script>
 
 <template>
+    <img :src="image" :alt="title">
     <ul>
-        <img :src="image" :alt="title">
         <li> {{ title }}</li>
         <li>{{ originalTitle }}</li>
         <li>

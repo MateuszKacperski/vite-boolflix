@@ -14,11 +14,27 @@ export default {
 </script>
 
 <template>
-    <div class="input-group mb-3">
-        <input @keyup.enter="$emit('serch-film', serchFilm)" type="text" class="form-control" placeholder="film"
-            v-model.trim="serchFilm">
-        <button class="btn btn-outline-secondary" type="button" @click="$emit('serch-film', serchFilm)">Button</button>
+    <div class="align-self-center">
+        <input @keyup.enter="$emit('serch-film', serchFilm)" type="text" placeholder="film" v-model.trim="serchFilm">
+        <button type="button" @click="$emit('serch-film', serchFilm)">Button</button>
     </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+input {
+    max-width: 150px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 5px 10px;
+}
+
+button {
+    background-color: white;
+    border: none;
+    padding: 5px 10px;
+    border-left: 1px solid black;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+</style>
