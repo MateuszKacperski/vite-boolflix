@@ -27,4 +27,12 @@ export default {
     </section>
 </template>
 
-<style lang="scss" scoped></style> 
+<style lang="scss" scoped>
+#films-list {
+    min-height: 46vh;
+}
+
+#series-list {
+    min-height: 45vh;
+}
+</style> 

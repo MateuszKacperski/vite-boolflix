@@ -23,6 +23,9 @@ export default {
         },
         image() {
             const endpointImg = `https://image.tmdb.org/t/p/w342${this.production.poster_path}`;
+            if (endpointImg == this.production.poster_path) {
+                return noImage = new URL('../assets/img/no-found.jpg')
+            }
             return endpointImg
         },
         vote() {
@@ -53,16 +56,16 @@ ul {
     list-style-type: none;
     color: white;
     background-color: black;
-}
 
-li {
-    padding-top: 10px;
-    margin: 10px 0;
-    font-size: 20px;
-}
+    li {
+        padding-top: 10px;
+        margin: 10px 0;
+        font-size: 20px;
 
-.img-flag {
-    max-height: 30px;
+        .img-flag {
+            max-height: 30px;
+        }
+    }
 }
 
 .production-img {
