@@ -30,9 +30,14 @@ export default {
 <style lang="scss" scoped>
 #films-list {
     min-height: 46vh;
+    margin-bottom: 50px;
 }
 
 #series-list {
     min-height: 45vh;
+}
+
+h1 {
+    margin-bottom: 50px;
 }
 </style> 

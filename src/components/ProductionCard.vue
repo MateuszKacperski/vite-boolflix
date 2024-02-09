@@ -1,5 +1,7 @@
 <script>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
+const noImage = 'https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg'
 
 export default {
     name: 'FilmCard',
@@ -8,10 +10,10 @@ export default {
     },
     computed: {
         title() {
-            return this.production.title || this.production.name
+            return this.production.title || this.production.name;
         },
         originalTitle() {
-            return this.production.original_title || this.production.original_name
+            return this.production.original_title || this.production.original_name;
         },
         hasFlag() {
             const flag = ['it', 'en'];
@@ -24,15 +26,15 @@ export default {
         image() {
             const endpointImg = `https://image.tmdb.org/t/p/w342${this.production.poster_path}`;
             if (endpointImg == this.production.poster_path) {
-                return noImage = new URL('../assets/img/no-found.jpg')
+                return noImage;
             }
-            return endpointImg
+            return endpointImg;
         },
         vote() {
-            const starVote = (this.production.vote_average / 2);
-            return starVote.toFixed(0);
+            return Math.ceil(this.production.vote_average / 2);
         }
-    }
+    },
+    components: { FontAwesomeIcon }
 }
 </script>
 
@@ -46,7 +48,9 @@ export default {
                 <img v-if="hasFlag" :src="flagSrc" :alt="production.original_language" class="img-fluid img-flag">
                 <span v-else>{{ production.original_language }}</span>
             </li>
-            <li><strong>Voto:</strong>{{ vote }}</li>
+            <li><strong>Voto:</strong>
+                <FontAwesomeIcon v-for="n in 5" :key="n" :icon="[n <= vote ? 'fas' : 'far', 'star']" />
+            </li>
         </ul>
     </div>
 </template>
@@ -69,7 +73,7 @@ ul {
 }
 
 .production-img {
-    min-height: 500px;
+    height: 500px;
     width: 300px;
 }
 
@@ -84,7 +88,8 @@ ul {
 
 .cover {
     display: none;
-    min-height: 500px;
+    height: 500px;
     width: 300px;
+    margin: 0;
 }
 </style>

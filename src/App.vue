@@ -29,8 +29,6 @@ export default {
 </script>
 
 <template>
-  <font-awesome-icon icon="fa-solid fa-star" style="color: #FFD43B;" />
-  <font-awesome-icon icon="fa-solid fa-star" style="color: black;" />
   <AppHeader @serch="serchedResults" />
   <AppMain />
 </template>
