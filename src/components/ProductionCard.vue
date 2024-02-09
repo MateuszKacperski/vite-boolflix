@@ -25,7 +25,7 @@ export default {
         },
         image() {
             const endpointImg = `https://image.tmdb.org/t/p/w342${this.production.poster_path}`;
-            if (endpointImg == this.production.poster_path) {
+            if (endpointImg == '') {
                 return noImage;
             }
             return endpointImg;

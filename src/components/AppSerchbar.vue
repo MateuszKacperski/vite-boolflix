@@ -15,8 +15,9 @@ export default {
 
 <template>
     <div class="align-self-center">
-        <input @keyup.enter="$emit('serch-film', serchFilm)" type="text" placeholder="film" v-model.trim="serchFilm">
-        <button type="button" @click="$emit('serch-film', serchFilm)">Button</button>
+        <input @keyup.enter="$emit('serch-film', serchFilm)" type="text" placeholder="Write the title"
+            v-model.trim="serchFilm">
+        <button type="button" @click="$emit('serch-film', serchFilm)">Serch</button>
     </div>
 </template>
 
